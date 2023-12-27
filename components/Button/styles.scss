@@ -1,0 +1,147 @@
+@import '../style/variables';
+
+%button-box-shadow {
+  box-shadow: 0px 4px 4px $colorBoxShadow;
+}
+
+.give-button-shadow {
+  &:hover {
+    text-shadow: 10px 14px 10px 10px red;
+  }
+}
+
+.button {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 4px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.button-large {
+  height: 44px;
+}
+
+.button-primary {
+  border: 1px solid $colorPrimary;
+  background-color: $colorPrimary;
+  color: $colorWhite;
+  &:hover {
+    box-shadow: 0px 4px 4px $colorBoxShadow;
+  }
+  &:active {
+    @extend %button-box-shadow;
+    background-color: $colorPrimaryDark;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &:disabled {
+    border: 1px solid $colorInactiveGrey;
+    background-color: $colorInactiveGrey;
+    color: $colorInactiveDarkGrey;
+    &:active {
+      background-color: $colorInactiveGrey;
+      color: $colorInactiveDarkGrey;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.button-secondary {
+  border: 1px solid $colorSecondaryDark;
+  background-color: $colorWhite;
+  color: $colorPrimary;
+  &:hover {
+    @extend %button-box-shadow;
+  }
+  &:disabled {
+    border: 1px solid $colorInactiveGrey;
+    background-color: $colorInactiveGrey;
+    color: $colorInactiveDarkGrey;
+    &:active {
+      background-color: $colorInactiveGrey;
+      color: $colorInactiveDarkGrey;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &:active {
+    background-color: $colorPrimaryDark;
+    color: $colorWhite;
+  }
+}
+
+.button-tertiary {
+  border: none;
+  background-color: inherit;
+  color: $colorPrimary;
+  &:hover {
+    text-shadow: 0px 4px 4px $colorBoxShadow;
+  }
+
+  &:disabled {
+    color: $colorInactiveGrey;
+    &:hover {
+      text-shadow: none;
+    }
+    &:active {
+      color: $colorInactiveGrey;
+    }
+  }
+  &:active {
+    color: $colorPrimaryDark;
+  }
+}
+
+.button-tertiary-alpha {
+  border: none;
+  background-color: inherit;
+  color: $colorInactiveDarkGrey;
+  &:hover {
+    text-shadow: 0px 4px 4px $colorBoxShadow;
+  }
+
+  &:disabled {
+    color: $colorInactiveGrey;
+  }
+  &:active {
+    color: $colorPrimaryDark;
+  }
+}
+
+.button-alert {
+  border: 1px solid $colorAlertNegative;
+  background-color: $colorAlertNegative;
+  color: $colorWhite;
+  &:hover {
+    box-shadow: 0px 4px 4px $colorBoxShadow;
+  }
+  &:active {
+    @extend %button-box-shadow;
+    border: 1px solid $colorAlertNegativeDark;
+    background-color: $colorAlertNegativeDark;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &:disabled {
+    border: 1px solid $colorInactiveGrey;
+    background-color: $colorInactiveGrey;
+    color: $colorInactiveDarkGrey;
+    &:active,
+    &:focus {
+      background-color: $colorInactiveGrey;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

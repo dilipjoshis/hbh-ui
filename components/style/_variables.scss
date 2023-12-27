@@ -1,0 +1,141 @@
+// Grid variables
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+//colors
+
+//primary
+$colorPrimary: #0483df;
+$colorPrimaryDark: #004b87;
+$colorPrimaryLight: #f3fcff;
+//secondary
+$colorSecondary: #edf7ff;
+$colorSecondaryDark: #68bcff;
+$colorSecondaryLight: #abe1ff;
+//neutral
+$colorInactiveGrey: #bcccd3;
+$colorDisabledGrey: #e5eef1;
+$colorInactiveDarkGrey: #788892;
+//alert colors
+$colorAlertNegative: #e76767;
+$colorAlertNegativeLight: #ffe1e1;
+$colorAlertNegativeDark: #9c0000;
+
+$colorAlertPositive: #00c170;
+$colorAlertPositiveLight: #d5f5e8;
+$colorAlertPositiveDark: #007946;
+
+$colorAlertNeutral: #fed74b;
+$colorAlertNeutralLight: #fff4cc;
+$colorAlertNeutralDark: #f9c200;
+
+//B&W
+$colorBlack: #101010;
+$colorWhite: #ffffff;
+//gradient
+$colorPrimaryGradient: linear-gradient(270deg, #0483df -0.05%, #004b87 99.95%);
+
+// Box shadow color
+$colorBoxShadow: rgba(0, 0, 0, 0.25);
+// Colors
+$faintGrey: #f7f2f2; //only used in ehr (MMS)????
+$infoBackgroundColor: #fff6ea; //patientApp used parked
+$violetColor: #8973eb; //patientApp used parked
+$lightTabColor: rgba(0, 178, 208, 0.1); //only used in ehr (MMS)????
+$darkGreen: #4eb189; //patientApp used parked
+$blueBorderColor: #4a90e2; ////patientApp used parked
+$masqueradingHeaderColor: #f7debd; ////patientApp used parked
+$tooltipColor: #007b92; //park know to check
+$telemedicineBackgroundColor: #06335a; //colorPrimaryDark
+$patientAppointmentCard: #90989f; //patient App only
+$salesforceBlueColor: #3f90d4; // salesforce checkbox on patient details page
+
+$painReductionColor100: #a0d5c1;
+$painReductionColor90: #a9c7a9;
+$painReductionColor80: #b9c590;
+$painReductionColor70: #e9cf83;
+$painReductionColor60: #eec368;
+$painReductionColor50: #e5b466;
+$painReductionColor40: #fc9c39;
+$painReductionColor30: #f59746;
+$painReductionColor20: #ea8c68;
+$painReductionColor10: #f6806d;
+$painReductionColor00: #f37980;
+
+// Theme Colors only used in self signup
+$themeRedColor: #d03d4d;
+$themeBlueColor: #17088d;
+$themeYellowColor: #ff9d1d;
+$themePurpleColor: #fb647c;
+$themeGrayColor: #5f5b60;
+$themeLightGrayColor: #b9b9ba;
+$themeOrangeColor: #ee7066;
+
+// Font Names
+$appFontName: 'Helvetica Neue';
+// Font Sizes
+$font-size-xxxxs: 12px;
+$font-size-xxxs: 14px;
+$font-size-xxs: 16px;
+$font-size-xs: 18px;
+$font-size-s: 20px;
+$font-size-m: 22px;
+$font-size-l: 24px;
+$font-size-xl: 26px;
+$font-size-xxl: 28px;
+$font-size-header-xxxl: 30px;
+$font-size-header-xxxxl: 32px;
+// Font Weights
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Pain Score Chart
+$silverGray: #ececec;
+$surveyDueColor: #fff4cc;
+$surveyMissedColor: #ffe1e1;
+$surveyUpComingColor: #d5f5e8;
+
+$colors: (
+  colorPrimary: $colorPrimary,
+  colorPrimaryDark: $colorPrimaryDark,
+  colorPrimaryLight: $colorPrimaryLight,
+  colorSecondary: $colorSecondary,
+  colorSecondaryDark: $colorSecondaryDark,
+  colorSecondaryLight: $colorSecondaryLight,
+  colorInactiveGrey: $colorInactiveGrey,
+  colorDisabledGrey: $colorDisabledGrey,
+  colorInactiveDarkGrey: $colorInactiveDarkGrey,
+  colorAlertNegative: $colorAlertNegative,
+  colorAlertNegativeLight: $colorAlertNegativeLight,
+  colorAlertNegativeDark: $colorAlertNegativeDark,
+  colorAlertPositive: $colorAlertPositive,
+  colorAlertPositiveLight: $colorAlertPositiveLight,
+  colorAlertPositiveDark: $colorAlertPositiveDark,
+  colorAlertNeutral: $colorAlertNeutral,
+  colorAlertNeutralLight: $colorAlertNeutralLight,
+  colorAlertNeutralDark: $colorAlertNeutralDark,
+  colorPrimaryGradient: $colorPrimaryGradient,
+  colorBoxShadow: $colorBoxShadow,
+  colorBlack: $colorBlack,
+  colorWhite: $colorWhite,
+);
+
+:export {
+  lightBoxModalBackgroundColor: rgba($colorBlack, 0.2);
+  colorAlertNegativeDark: $colorAlertNegativeDark;
+  colorAlertPositiveDark: $colorAlertPositiveDark;
+  colorPrimary: $colorPrimary;
+  colorWhite: $colorWhite;
+  colorInactiveGrey: $colorInactiveGrey;
+  colorBlack: $colorBlack;
+}
+:export {
+  @each $key, $value in $colors {
+    #{unquote($key)}: $value;
+  }
+}
