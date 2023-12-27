@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+# IntelliJ project files
+.idea
+*.iml
+
+/node_modules
+/site/build
+/site/dist
+/lib
+/coverage
+
+/site/src/containers/test/index.tsx

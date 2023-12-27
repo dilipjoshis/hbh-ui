@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "../dist/",
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "../types/"
+    ]
+  },
+  "include": [
+    "../src/",
+    "../types/",
+    "../../components/"
+  ]
+}
