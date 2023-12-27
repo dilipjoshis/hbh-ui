@@ -34,7 +34,6 @@
 
 import React from 'react';
 import { ButtonProps } from './types';
-import './styles.scss';
 
 const Button = (props: ButtonProps) => {
   const getButtonStyleForGivenButtonType = (category: string | undefined): string | null => {
